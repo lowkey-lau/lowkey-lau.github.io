@@ -22,28 +22,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.lowkey-lau.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://unpkg.com/hexo-theme-next@8.12.1/source/js/config.js"></script>
 
-    <meta name="description" content="我个人使用的是 Scss&#x2F;Sass 的 css 编码手法，在工作上会经常遇到比较有价值的小知识，在这里记录。">
+    <meta name="description" content="前言：在使用 uni-app 开发 webApp 的时候，总会遇见莫名其妙的一些小坑，有些是版本引发的，有一些是小细节引发的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记录个人使用SCSS的小知识">
-<meta property="og:url" content="https://www.lowkey-lau.site/2019/12/06/%E8%AE%B0%E5%BD%95%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8SCSS%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/">
+<meta property="og:title" content="uni-app 遇坑集合">
+<meta property="og:url" content="https://www.lowkey-lau.site/2019/08/29/uni-app%20%E9%81%87%E5%9D%91%E9%9B%86%E5%90%88/">
 <meta property="og:site_name" content="lowkey-lau个人博客">
-<meta property="og:description" content="我个人使用的是 Scss&#x2F;Sass 的 css 编码手法，在工作上会经常遇到比较有价值的小知识，在这里记录。">
+<meta property="og:description" content="前言：在使用 uni-app 开发 webApp 的时候，总会遇见莫名其妙的一些小坑，有些是版本引发的，有一些是小细节引发的。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-12-06T10:19:09.000Z">
-<meta property="article:modified_time" content="2023-01-07T08:27:18.252Z">
+<meta property="article:published_time" content="2019-08-29T07:22:22.000Z">
+<meta property="article:modified_time" content="2023-01-09T06:49:30.935Z">
 <meta property="article:author" content="刘俊杭 (lowkey-lau)">
-<meta property="article:tag" content="css,scss">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="多端开发">
+<meta property="article:tag" content="uni-app">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://www.lowkey-lau.site/2019/12/06/%E8%AE%B0%E5%BD%95%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8SCSS%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/">
+<link rel="canonical" href="https://www.lowkey-lau.site/2019/08/29/uni-app%20%E9%81%87%E5%9D%91%E9%9B%86%E5%90%88/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lowkey-lau.site/2019/12/06/%E8%AE%B0%E5%BD%95%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8SCSS%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/","path":"2019/12/06/记录个人使用SCSS的小知识/","title":"记录个人使用SCSS的小知识"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lowkey-lau.site/2019/08/29/uni-app%20%E9%81%87%E5%9D%91%E9%9B%86%E5%90%88/","path":"2019/08/29/uni-app 遇坑集合/","title":"uni-app 遇坑集合"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>记录个人使用SCSS的小知识 | lowkey-lau个人博客</title>
+<title>uni-app 遇坑集合 | lowkey-lau个人博客</title>
   
 
 
@@ -119,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9-scss-%E5%8F%98%E9%87%8F%E5%81%9A-calc-%E8%AE%A1%E7%AE%97%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">对 scss 变量做 calc 计算的方法</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E6%A0%B9%E6%8D%AE-body-%E5%AE%9A%E4%BD%8D%EF%BC%8C%E5%9C%A8%E6%89%8B%E6%9C%BA%E7%AB%AF%E4%BC%9A%E5%87%BA%E7%8E%B0%E5%AE%9A%E4%BD%8D%E4%B8%8D%E5%87%86%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">如果一个元素根据 body 定位，在手机端会出现定位不准的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E4%BD%BF%E7%94%A8%E7%B1%BB%E5%90%8D%E4%B8%BA-header-%E6%97%B6%E6%A0%B7%E5%BC%8F%E4%B8%8D%E8%83%BD%E8%AF%BB%E5%8F%96"><span class="nav-number">2.</span> <span class="nav-text">在使用类名为 header 时样式不能读取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95-uni-getStorageSync-%E5%9C%A8-H5-%E9%A1%B5%E9%9D%A2%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF"><span class="nav-number">3.</span> <span class="nav-text">使用方法 uni.getStorageSync 在 H5 页面出现错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uni-app-%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%EF%BC%8C%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84-onLoad-onShow-%E6%96%B9%E6%B3%95%E4%B8%8D%E6%89%A7%E8%A1%8C"><span class="nav-number">4.</span> <span class="nav-text">uni-app 中使用父子组件，子组件中的 onLoad , onShow 方法不执行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E6%97%A5%E5%B8%B8%E5%BC%80%E5%8F%91%E4%B8%AD%EF%BC%8C%E4%BC%9A%E5%87%BA%E7%8E%B0%E5%9B%BE%E7%89%87-%E2%80%98%E9%97%AA%E4%B8%80%E4%B8%8B%E2%80%99-%E7%9A%84%E7%99%BD%E8%89%B2%E9%97%AA%E5%8A%A8%E6%95%88%E6%9E%9C%E3%80%82"><span class="nav-number">5.</span> <span class="nav-text">在日常开发中，会出现图片 ‘闪一下’ 的白色闪动效果。</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -193,7 +195,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lowkey-lau.site/2019/12/06/%E8%AE%B0%E5%BD%95%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8SCSS%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/">
+    <link itemprop="mainEntityOfPage" href="https://www.lowkey-lau.site/2019/08/29/uni-app%20%E9%81%87%E5%9D%91%E9%9B%86%E5%90%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/icon-avatar.jpg">
@@ -206,12 +208,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="记录个人使用SCSS的小知识 | lowkey-lau个人博客">
+      <meta itemprop="name" content="uni-app 遇坑集合 | lowkey-lau个人博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          记录个人使用SCSS的小知识
+          uni-app 遇坑集合
         </h1>
 
         <div class="post-meta-container">
@@ -222,14 +224,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-12-06 18:19:09" itemprop="dateCreated datePublished" datetime="2019-12-06T18:19:09+08:00">2019-12-06</time>
+      <time title="创建时间：2019-08-29 15:22:22" itemprop="dateCreated datePublished" datetime="2019-08-29T15:22:22+08:00">2019-08-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-01-07 16:27:18" itemprop="dateModified" datetime="2023-01-07T16:27:18+08:00">2023-01-07</time>
+      <time title="修改时间：2023-01-09 14:49:30" itemprop="dateModified" datetime="2023-01-09T14:49:30+08:00">2023-01-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -237,7 +239,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+          <a href="/categories/uni-app/" itemprop="url" rel="index"><span itemprop="name">uni-app</span></a>
         </span>
     </span>
 
@@ -252,23 +254,45 @@
     
     <div class="post-body" itemprop="articleBody">
         <blockquote>
-<p>我个人使用的是 Scss&#x2F;Sass 的 css 编码手法，在工作上会经常遇到比较有价值的小知识，在这里记录。</p>
+<p>前言：在使用 uni-app 开发 webApp 的时候，总会遇见莫名其妙的一些小坑，有些是版本引发的，有一些是小细节引发的。</p>
 </blockquote>
 <span id="more"></span>
 
 <hr>
-<h3 id="对-scss-变量做-calc-计算的方法"><a href="#对-scss-变量做-calc-计算的方法" class="headerlink" title="对 scss 变量做 calc 计算的方法"></a>对 <code>scss</code> 变量做 <code>calc</code> 计算的方法</h3><blockquote>
-<p>在使用 scss 编译的时候，直接使用 <strong>calc($x + $y)</strong> ，浏览器是不能识别的。于是找了一下相关的资料，发现需要使用 <strong>#{$x}</strong> 才可以使用</p>
+<h2 id="如果一个元素根据-body-定位，在手机端会出现定位不准的问题"><a href="#如果一个元素根据-body-定位，在手机端会出现定位不准的问题" class="headerlink" title="如果一个元素根据 body 定位，在手机端会出现定位不准的问题"></a>如果一个元素根据 body 定位，在手机端会出现定位不准的问题</h2><blockquote>
+<p>元素使用 <code>position: absolute</code> 进行定位且 <code>top: 0</code> 时，父级是 <code>page</code> 情况下，在手机端会出现定位不准确的问题，会被 <code>状态栏</code> 所遮盖。</p>
 </blockquote>
-<pre class="language-scss" data-language="scss"><code class="language-scss"><span class="token comment">// 范例</span>
-<span class="token property"><span class="token variable">$x</span></span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token variable">#&#123;$x&#125;</span> <span class="token operator">+</span> 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token operator">></span> <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>20px <span class="token operator">+</span> 100%<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-
 <hr>
-<p>#END</p>
+<p><strong>出现这个问题的原因是如果根据 <code>page</code> 定位时，最顶部的位置是 <code>屏幕最顶端</code> ，会跟 <code>状态栏</code> 重叠，造成样式混乱，可以使用官方提供的一个属性 <code>var(--status-bar-height)</code> ，来获取状态栏的高度，在定位的时候加上此属性即可。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/tutorial/syntax-css.html#css-%E5%8F%98%E9%87%8F">uni-app 官网 - css 变量</a></p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">/* <span class="token comment">#ifdef APP-PLUS */ //判断是否手机端，PC端此属性值为 0</span>
+top: calc<span class="token punctuation">(</span>【你的原始变量】 + var<span class="token punctuation">(</span>--status-bar-height<span class="token punctuation">))</span><span class="token punctuation">;</span>
+/* <span class="token comment">#endif */</span></code></pre>
 
+<p><br /><br /></p>
+<h2 id="在使用类名为-header-时样式不能读取"><a href="#在使用类名为-header-时样式不能读取" class="headerlink" title="在使用类名为 header 时样式不能读取"></a>在使用类名为 <code>header</code> 时样式不能读取</h2><blockquote>
+<p>在开发过程中，定义了某个元素的 <code>class</code> 为 <code>header</code>， 发现修改的样式不生效。</p>
+</blockquote>
+<hr>
+<p><strong>找了资料发现这里确实有着小坑，在 <a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/tutorial/vue-components.html#%E5%91%BD%E5%90%8D%E9%99%90%E5%88%B6">uniapp 官网 - 命名限制</a> 有记载，<code>命名方式存在限制</code></strong></p>
+<p><strong>以下特定的字符串会保留关键字，不可作为组件名。</strong></p>
+<p><code>a</code>、<code>canvas</code>、<code>cell</code>、<code>content</code>、<code>countdown</code>、<code>datepicker</code>、<code>div</code>、<code>element</code>、<code>embed</code>、<code>header</code>、<code>image</code>、<code>img</code>、<code>indicator</code>、<code>input</code>、<code>link</code>、<code>list</code>、<code>loading-indicator</code>、<code>loading</code>、<code>marquee</code>、<code>meta</code>、<code>refresh</code>、<code>richtext</code>、<code>script</code>、<code>scrollable</code>、<code>scroller</code>、<code>select</code>、<code>slider-neighbor</code>、<code>slider</code>、<code>slot</code>、<code>span</code>、<code>spinner</code>、<code>style</code>、<code>svg</code>、<code>switch</code>、<code>tabbar</code>、<code>tabheader</code>、<code>template</code>、<code>text</code>、<code>textarea</code>、<code>timepicker</code>、<code>transition-group</code>、<code>transition</code>、<code>video</code>、<code>view</code>、<code>web</code></p>
+<p><br /><br /></p>
+<h2 id="使用方法-uni-getStorageSync-在-H5-页面出现错误"><a href="#使用方法-uni-getStorageSync-在-H5-页面出现错误" class="headerlink" title="使用方法 uni.getStorageSync 在 H5 页面出现错误"></a>使用方法 <code>uni.getStorageSync</code> 在 <strong><em>H5</em></strong> 页面出现错误</h2><blockquote>
+<p>在获取本地缓存的数据时，调用 <code>uni.getStorageSync</code> 方法，出现错误日志 <code>SyntaxError: Unexpected token Z in JSON at position 1</code></p>
+</blockquote>
+<hr>
+<p><strong>研究了一下代码，发现 <code>uni.getStorageSync</code> 在 <code>本地存储</code> 为 <code>null</code> 或者 <code>单个字符串</code> 的时候会出现这个错误，因为这个方法读取的是一个 <code>Object</code> 的格式，但它获取不到内容，所以会出现这个 bug。</strong></p>
+<p><strong>解决方式是方法调用前先判定 <code>本地存储</code> 里有无所需的字段，如果为 <code>null</code> 、<code>underfind</code> 、<code>空值</code> 的时使用 <code>uni.setStorage</code> 创建一个记录，再来调用它。</strong></p>
+<p><small><em>需要注意的是定义的字段名最好不要设置为大众化的， 例如 language，lang 等，以防相同参数产生 Bug</em></small></p>
+<p><br /><br /></p>
+<h2 id="uni-app-中使用父子组件，子组件中的-onLoad-onShow-方法不执行"><a href="#uni-app-中使用父子组件，子组件中的-onLoad-onShow-方法不执行" class="headerlink" title="uni-app 中使用父子组件，子组件中的 onLoad , onShow 方法不执行"></a>uni-app 中使用父子组件，子组件中的 <code>onLoad</code> , <code>onShow</code> 方法不执行</h2><blockquote>
+<p>在开发过程中，组件开发是最常见的开发模式，但是在 uni-app 中，子组件的生命周期不能使用 <code>onShow</code>、 <code>onLoad</code>等</p>
+</blockquote>
+<hr>
+<p><strong>看了相关文档，发现组件有它单独的生命周期 <a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/tutorial/page.html#componentlifecycle">uni-app 官网 - 组件生命周期</a>，使用的是 vue 的标准，因此组件开发的生命周期必须区分开来调用。</strong></p>
+<p><br /><br /></p>
+<h2 id="在日常开发中，会出现图片-‘闪一下’-的白色闪动效果。"><a href="#在日常开发中，会出现图片-‘闪一下’-的白色闪动效果。" class="headerlink" title="在日常开发中，会出现图片 ‘闪一下’ 的白色闪动效果。"></a>在日常开发中，会出现图片 ‘闪一下’ 的白色闪动效果。</h2>
     </div>
 
     
@@ -295,20 +319,22 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/css-scss/" rel="tag"># css,scss</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+              <a href="/tags/%E5%A4%9A%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag"># 多端开发</a>
+              <a href="/tags/uni-app/" rel="tag"># uni-app</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2019/11/27/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-5/" rel="prev" title="使用uni-app遇见的坑-5">
-                  <i class="fa fa-chevron-left"></i> 使用uni-app遇见的坑-5
+                <a href="/2019/08/29/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-1/" rel="prev" title="使用uni-app遇见的坑-1">
+                  <i class="fa fa-chevron-left"></i> 使用uni-app遇见的坑-1
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/11/06/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-6/" rel="next" title="使用uni-app遇见的坑-6">
-                  使用uni-app遇见的坑-6 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/09/05/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E4%B9%8B%20-%20BEM/" rel="next" title="代码规范之 - BEM">
+                  代码规范之 - BEM <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

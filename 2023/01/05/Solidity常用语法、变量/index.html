@@ -24,27 +24,27 @@
 
     <meta name="description" content="目前工作职责已经不局限于单纯的 web 开发了，既然已经踏上 区块链 这条大船，智能合约 当然得安排上，而我先入手 以太坊 的开发路线，使用 solidity 编写智能合约。  Solidity 中文文档remix - 编写智能合约的在线软件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Solidity常用语法、变量记录">
-<meta property="og:url" content="https://www.lowkey-lau.site/2023/01/05/Solidity%E8%AF%AD%E6%B3%95/">
+<meta property="og:title" content="Solidity常用语法、变量">
+<meta property="og:url" content="https://www.lowkey-lau.site/2023/01/05/Solidity%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E3%80%81%E5%8F%98%E9%87%8F/">
 <meta property="og:site_name" content="lowkey-lau个人博客">
 <meta property="og:description" content="目前工作职责已经不局限于单纯的 web 开发了，既然已经踏上 区块链 这条大船，智能合约 当然得安排上，而我先入手 以太坊 的开发路线，使用 solidity 编写智能合约。  Solidity 中文文档remix - 编写智能合约的在线软件">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-01-05T08:00:00.000Z">
-<meta property="article:modified_time" content="2023-01-07T08:27:10.987Z">
+<meta property="article:modified_time" content="2023-01-09T01:45:14.443Z">
 <meta property="article:author" content="刘俊杭 (lowkey-lau)">
 <meta property="article:tag" content="区块链">
 <meta property="article:tag" content="Solidity">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://www.lowkey-lau.site/2023/01/05/Solidity%E8%AF%AD%E6%B3%95/">
+<link rel="canonical" href="https://www.lowkey-lau.site/2023/01/05/Solidity%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E3%80%81%E5%8F%98%E9%87%8F/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lowkey-lau.site/2023/01/05/Solidity%E8%AF%AD%E6%B3%95/","path":"2023/01/05/Solidity语法/","title":"Solidity常用语法、变量记录"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lowkey-lau.site/2023/01/05/Solidity%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E3%80%81%E5%8F%98%E9%87%8F/","path":"2023/01/05/Solidity常用语法、变量/","title":"Solidity常用语法、变量"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Solidity常用语法、变量记录 | lowkey-lau个人博客</title>
+<title>Solidity常用语法、变量 | lowkey-lau个人博客</title>
   
 
 
@@ -135,7 +135,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -194,7 +194,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lowkey-lau.site/2023/01/05/Solidity%E8%AF%AD%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://www.lowkey-lau.site/2023/01/05/Solidity%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E3%80%81%E5%8F%98%E9%87%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/icon-avatar.jpg">
@@ -207,12 +207,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Solidity常用语法、变量记录 | lowkey-lau个人博客">
+      <meta itemprop="name" content="Solidity常用语法、变量 | lowkey-lau个人博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Solidity常用语法、变量记录
+          Solidity常用语法、变量
         </h1>
 
         <div class="post-meta-container">
@@ -230,7 +230,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-01-07 16:27:10" itemprop="dateModified" datetime="2023-01-07T16:27:10+08:00">2023-01-07</time>
+      <time title="修改时间：2023-01-09 09:45:14" itemprop="dateModified" datetime="2023-01-09T09:45:14+08:00">2023-01-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -457,7 +457,7 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/01/07/Hexo%E4%BF%AE%E6%94%B9%E6%A0%B7%E5%BC%8F/" rel="next" title="Hexo 6.0修改样式">
+                <a href="/2023/01/07/Hexo%206.0%E4%BF%AE%E6%94%B9%E6%A0%B7%E5%BC%8F/" rel="next" title="Hexo 6.0修改样式">
                   Hexo 6.0修改样式 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
